@@ -1,2 +1,2 @@
 # Panda-AI
-AI learning project 
+Playing with Google AI platform.
