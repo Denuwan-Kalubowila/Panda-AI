@@ -70,17 +70,16 @@ async function chatPanda() {
     };
     //get response
     const [response] = await predictionServiceClient.predict(request);
-    console.log('Bot');
     const predictions = response.predictions;
     return predictions
 }
 
 //get final output from json data
-async function main(){
+async function main(){helpers
     let res=await chatPanda()
     let data=res[0].structValue.fields.candidates.listValue.values[0].structValue.fields.content.stringValue
-    console.log(data)
-
+    console.log(`Panda: ${data}`)
+    main()
 }
 
 main()
